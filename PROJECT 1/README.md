@@ -4,6 +4,8 @@
 
 ## Linux Command is a program or utility that runs on the CLI- a console that interacts with the system via texts and processes. 
 
+### Attached below are the screenshot of my workspace on Ubuntu
+
 ![Alt text](<Images/sudo apt upgrade/Sudo command.PNG>)
 ![Alt text](Images/pwd/pwd.PNG)
 ![Alt text](Images/cat,tac/CaptureCP2.PNG)
