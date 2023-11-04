@@ -1,4 +1,4 @@
-# Project on Linux Commands
+# Project 1 on Linux Commands
 
 ## Linux is a family of open-source Unix operating systems based on the Linux Kernel.
 
