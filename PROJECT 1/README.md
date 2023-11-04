@@ -4,24 +4,20 @@
 
 ## Linux Command is a program or utility that runs on the CLI- a console that interacts with the system via texts and processes. 
 
-
-### The image folders 1-14 consist of screenshots of different Linux commands in batches
-
-### FILE MANIPULATION COMMANDS
-1. Sudo apt upgrade. Sudo is an adminstrative or root user.
-2. pwd shows the Present Working Directory
-3. cd which is used to change directory to another
-4. ls displays lists of files and directories within a system, including the subdirectories and hidden files
-5. cat lists, combines, and writes file contents. And tac dispalys files content in reverse order.
-6. cp command copies files or directories and their contents
-7. mv command moves and rename files and directories, without showing any output upon execution
-8. mkdir/rm/rmdir - command to create directories/delete files from directories/permanently delete an empty directory
-9. find/grep/locate/touch- commands to search for files in a specific directory/find words by searching through log files/find a file in the database/to create an empty file.
-10. df/du - Report the systems disk usage/to check the space a file or directory takes up
-11. head/tail - the command allows the view of the first ten lines of a text/ and the last ten lines of a file
-12. diff/tar -compares the difference between two contents of a file line by line /archives multiple files into a TAR file
-
-### FILE PERMISSIONS AND OWNERSHIP COMMANDS
-13. chmod/history a command that modifies a file or directory's read,write and execute permissions/list up to 500 or more previously executed commands for reuse
-14. echo/hostname/uname - dispalys a line of text or string using the standard output/shows the systems hostname/this will print detailed info about your linux system and hardware
-15. zip/unzip/wget -compresses your files into a ZIP file/--/allows you to download files from the internet, working in the background.
+![Alt text](<Images/sudo apt upgrade/Sudo command.PNG>)
+![Alt text](Images/pwd/pwd.PNG)
+![Alt text](Images/cat,tac/CaptureCP2.PNG)
+![Alt text](Images/cat,tac/CAT.PNG)
+![Alt text](Images/cat,tac/CaptureCP2.PNG) ![Alt text](Images/cat,tac/CAT.PNG) ![Alt text](Images/cat,tac/TAC.PNG)
+![Alt text](Images/cd/cd.PNG) ![Alt text](Images/cd/cd2.PNG)
+![Alt text](Images/chmod,history/chmod.PNG)![Alt text](Images/chmod,history/history.PNG)![Alt text](<Images/chmod,history/history tail.PNG>)
+![Alt text](Images/cp/cp-R.PNG)![Alt text](Images/cp/CP.PNG)
+![Alt text](Images/df,du/df.PNG)![Alt text](Images/df,du/df2.PNG)![Alt text](Images/df,du/du.PNG)
+![Alt text](Images/diff,tar/diff.PNG)![Alt text](Images/diff,tar/tar.PNG)![Alt text](Images/diff,tar/tar2.PNG)
+![Alt text](Images/echo,hostname,uname/Echo.PNG)![Alt text](Images/echo,hostname,uname/hostname.PNG)![Alt text](Images/echo,hostname,uname/uname.PNG)
+![Alt text](Images/find,grep,locate.touch/grep/locate/touch/find.PNG)![Alt text](Images/find,grep,locate.touch/grep/locate/touch/grep.PNG)![Alt text](Images/find,grep,locate.touch/grep/locate/touch/locate.PNG)![Alt text](Images/find,grep,locate.touch/grep/locate/touch/touch.PNG)
+![Alt text](Images/head,tail/head.PNG)![Alt text](Images/head,tail/Tail.PNG)
+![Alt text](<Images/ls/2 ls-R.PNG>)![Alt text](<Images/ls/3 ls -a.PNG>)![Alt text](<Images/ls/4 ls-lh.PNG>)![Alt text](Images/ls/Ls.PNG)
+![Alt text](Images/mkdir,rm,rmdir/rm/rmdir/mkdir.PNG)![Alt text](Images/mkdir,rm,rmdir/rm/rmdir/rm.PNG)![Alt text](Images/mkdir,rm,rmdir/rm/rmdir/rmdir.PNG)
+![Alt text](<Images/mv/mv-rename file.PNG>)![Alt text](Images/mv/mv.PNG)
+![Alt text](Images/zip,unzip,wget/unzip.PNG)![Alt text](Images/zip,unzip,wget/zip.PNG)![Alt text](Images/zip,unzip,wget/wget.PNG)
