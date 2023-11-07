@@ -1,5 +1,6 @@
 # DevOps_Projects
-Practical Projects from Darey.io classes
 
-This repository will consist of Projects starting from Linux Project and many others.
-Each project will be in a folder under DevOps_Projects folder
+### 30 REAL TIME DEVOPS PROJECTS
+
+
+This is a repository for Projects starting from the basic Linux Projects up to advance projects and many others. Each project will be in a folder under DevOps_Projects.
