@@ -6,9 +6,13 @@
 
 ### Attached below are the screenshots of my workspace on Ubuntu
 
+`sudo apt update`
 ![sudo apt upgrade](<Images/sudo apt upgrade/Sudo command.PNG>)
 
+`pwd`
 ![Alt text](Images/pwd/pwd.PNG)
+
+`cp`, `cat` , `tac`
 
 ![Alt text](Images/cat,tac/CaptureCP2.PNG)
 
@@ -16,6 +20,7 @@
 
 ![Alt text](Images/cat,tac/CaptureCP2.PNG) ![Alt text](Images/cat,tac/CAT.PNG) ![Alt text](Images/cat,tac/TAC.PNG)
 
+`code`
 ![Alt text](Images/cd/cd.PNG) ![Alt text](Images/cd/cd2.PNG)
 
 ![Alt text](Images/chmod,history/chmod.PNG)![Alt text](Images/chmod,history/history.PNG)![Alt text](<Images/chmod,history/history tail.PNG>)
