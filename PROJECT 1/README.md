@@ -6,7 +6,7 @@
 
 ### Attached below are the screenshots of my workspace on Ubuntu
 
-![Alt text](<Images/sudo apt upgrade/Sudo command.PNG>)
+![sudo apt upgrade](<Images/sudo apt upgrade/Sudo command.PNG>)
 
 ![Alt text](Images/pwd/pwd.PNG)
 
