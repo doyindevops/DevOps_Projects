@@ -7,9 +7,11 @@
 ### Attached below are the screenshots of my workspace on Ubuntu
 
 `sudo apt update`
+
 ![sudo apt upgrade](<Images/sudo apt upgrade/Sudo command.PNG>)
 
 `pwd`
+
 ![Alt text](Images/pwd/pwd.PNG)
 
 `cp`, `cat` , `tac`
