@@ -75,7 +75,7 @@ A database Management System needs to be installed for storage and management of
 
 To install MySQL
 
-> $ sudo apt install mysql-server
+> $ sudo apt install mysql-server 
 
 confirm with a `Y` and enter
 
