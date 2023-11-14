@@ -25,7 +25,7 @@ Then follow the steps below;
 When you are in the downloads folder, run the below command to connect to your EC2 instance successfully.
 
 > cd ~/Downloads
-> 
+
 ![Alt text](<Images/EC2 INSTANCE.PNG>)
 
 And your Ubuntu server is launched
@@ -42,33 +42,33 @@ Steps to install Apache;
 1- Run the commands below to update the list of packages in the package manager and the second command is to run the Apache2 package installer.
 
 > $ sudo apt update
->
+
 > ![Alt text](<Images/Sudo apt update 1.PNG>)
 > ![Alt text](<Images/Sudo apt update 2.PNG>)
-> 
-> 
+ 
+
 > $ sudo apt install apache2
->
-> After running the code above, you then run this next one to verify that you have correctly insytalled Apache2. If it is green and running, then you have just launched your first Web Server in the cloud. 
->
-> > $ sudo systemctl status apache2
->
+
+After running the code above, you then run this next one to verify that you have correctly insytalled Apache2. If it is green and running, then you have just launched your first Web Server in the cloud. 
+
+> $ sudo systemctl status apache2
+
 > ![Alt text](<Images/apache2 running.PNG>)
 
 Open port 80 which is the default port that web servers use to access web pages on the internet. This should be done on the AWS console where the SSH port was enabled.
 Then Run the below commands to test how the Apache server responds to curl with some payload after the HTTP port is configured running the below commands. The first command is trying to access the webserver via a DNS name while the second by IPs address(the Ip specified, corresponds to the DNS name 'localhost' and the process of converting the DNS name to Ip is called resolution).
 
 > $ curl http://localhost:80
-> 
+
 or
 
 > $ curl http://127.0.0.1:80
->
-> ![Alt text](<Images/curl 1.PNG>)
->
->Once you get a positive response,try accessing Apache from your browser via this address https://<Public Ip address>:80 
-> This is the page you should see and it is the same content as seen in the curl local host command ran just that on the web, the HTML formatting is represented well.
->
+
+![Alt text](<Images/curl 1.PNG>)
+
+Once you get a positive response,try accessing Apache from your browser via this address https://<Public Ip address>:80 
+This is the page you should see and it is the same content as seen in the curl local host command ran just that on the web, the HTML formatting is represented well.
+
 > ![Alt text](<Images/apache 2 worked.PNG>)
 
 
@@ -84,33 +84,33 @@ To install MySQL:
 Run the command below to install MySQL software and when prompted to confirm installation, type Y.
 
 > sudo apt install mysql-server
->
+
 > ![Alt text](<Images/install mysql.PNG>)
->
-> Login to the MySQL console with the code below and this will connect to the MySQL server as the administrative database User root which is inferred by the use of sudo when running the command.
+
+Login to the MySQL console with the code below and this will connect to the MySQL server as the administrative database User root which is inferred by the use of sudo when running the command.
 
 ![Alt text](<Images/connect to mysql.PNG>)
 
 You are advised to run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. before running the script, you will set a password for the root User, using **mysql_native _password** as default authentication method. We are defining this user's password here as **Password.1**
 
 > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
->
-> Exit the MySQL shell with
->
-> 
->
-> > mysql> exit
+
+Exit the MySQL shell with
+
+ 
+
+> mysql> exit
 
 ![Alt text](<Images/exit mysql.PNG>)
 
 Start the interactive script by running the:
 
 > $ sudo mysql_secure_installation
->
-> This will ask you if you want to configure the `VALIDATE PASSWORD PLUGIN `(note that enabling this feature is a judgement call, and if enabled, passwords which do not match the specified criteria will be rejected by MySQL with an error), so it is safe to leave it as disabled but use strong and unique passwords.
-> After you answer yes, you will need to select a level of password verification (selecting 2 means strongest level as you will get errors when password does not contain numbers, upper and lowercases letters, and special characters).
->
->Please note that this password asked is the ***MySQL root user*** as the frst password set is the ***database root User password***. You will be shown the password strength that you just entered if password validation is enabled and you satisfied with the password enter Y for yes at the prompt.
+
+This will ask you if you want to configure the `VALIDATE PASSWORD PLUGIN `(note that enabling this feature is a judgement call, and if enabled, passwords which do not match the specified criteria will be rejected by MySQL with an error), so it is safe to leave it as disabled but use strong and unique passwords.
+After you answer yes, you will need to select a level of password verification (selecting 2 means strongest level as you will get errors when password does not contain numbers, upper and lowercases letters, and special characters).
+
+Please note that this password asked is the ***MySQL root user*** as the frst password set is the ***database root User password***. You will be shown the password strength that you just entered if password validation is enabled and you satisfied with the password enter Y for yes at the prompt.
 
 ![Alt text](<Images/msql scure-installation 1.PNG>)
 
@@ -123,11 +123,11 @@ For the rest of questions press Y and hit Enter at each prompt.This will prompt 
 When finished, test if login is successful running the below command. The -p flag will prompt for password used after changing the root user password
 
 > sudo mysql -p
-> 
-> ![Alt text](<Images/test mysql logging.PNG>)
->
-> You can then log out with the command
-> ![Alt text](<Images/exit mysql.PNG>)
+
+![Alt text](<Images/test mysql logging.PNG>)
+
+You can then log out with the command
+![Alt text](<Images/exit mysql.PNG>)
 
 
 
@@ -139,15 +139,15 @@ PHP is the conmponent of our setup that will help process code to display dynami
 To install the 3 packages at once. Run the following code:
 
 > sudo apt install php libapache2-mod-php php-mysql
->
-> ![Alt text](<Images/install PHP 3 packages.PNG>)
+
+![Alt text](<Images/install PHP 3 packages.PNG>)
 
 Once the installation is complete, run the below command to confirm PHP version.
 
 > php -v
-> ![Alt text](<Images/PHP -V.PNG>)
->
->At this point the LAMP stack (Linux, Apache, MySQL and PHP) is completely installed and fully operational.
+![Alt text](<Images/PHP -V.PNG>)
+
+At this point the LAMP stack (Linux, Apache, MySQL and PHP) is completely installed and fully operational.
 
 
 
@@ -161,23 +161,23 @@ Set up a domain called ***projectlamp*** . Apache on Ubuntu has a server block e
 Create directory for ***projectlamp*** runing the command below:
 
 > $ sudo mkdir /var/www/projectlamp
->
-> ![Alt text](<Images/create projectlamp dir.PNG>)
->
-> Assign ownership of the directory with the &USER environment variable, which will reference the current system user.
+
+![Alt text](<Images/create projectlamp dir.PNG>)
+
+Assign ownership of the directory with the &USER environment variable, which will reference the current system user.
 
 > $ sudo chown -R $USER:$USER /var/www/projectlamp
->
-> ![Alt text](Images/chown.PNG)
->
-> Create and open a new configuration file in Apache's sites-available directory using any command line editor.
->
+
+![Alt text](Images/chown.PNG)
+
+Create and open a new configuration file in Apache's sites-available directory using any command line editor.
+
 > $ sudo vi /etc/apache2/sites-available/projectlamp.conf
->
-> ![Alt text](<Images/sites-available vim.PNG>)
->
-> Paste the below bare-bones configuration by hitting on *i* on the keyboard to enter insert mode and paste the below
->
+
+![Alt text](<Images/sites-available vim.PNG>)
+
+Paste the below bare-bones configuration by hitting on *i* on the keyboard to enter insert mode and paste the below
+
 <VirtualHost *:80>
     ServerName projectlamp
     ServerAlias www.projectlamp 
@@ -186,9 +186,10 @@ Create directory for ***projectlamp*** runing the command below:
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
- Once you save and close, run the code below and you will get the result in the image
+Once you save and close, run the code below and you will get the result in the image
 
  >sudo ls /etc/apache2/sites-available
+
 ![Alt text](<Images/result of site-available.PNG>)
    
 
@@ -199,32 +200,29 @@ You can use a2ensite to enable the new virtual host.
 
 You might want to disable the default website that comes installed with apache running the below command.
 > $ sudo a2dissite 000-default
->
-> To make sure your configuration does not containsyntax error, run.
+
+To make sure your configuration does not containsyntax error, run.
 > >$ sudo apache2ctl configtest
->
-> ![Alt text](Images/a2ensite.PNG)
+
+![Alt text](Images/a2ensite.PNG)
 
 Reload Apache so the changes take effect
 
 > $ sudo systemctl reload apache2
-> ![Alt text](<Images/apache2 reload.PNG>)
+![Alt text](<Images/apache2 reload.PNG>)
 
 
 Your new website is now active but ***/var/www/projectlamp*** is still empty. Create an **index.html** file in that location so that you can test the Virtual host works as expected.
 
 > sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
->
-> Access the website from the browser
-> http://<Public-IP-Address>:80
+
+Access the website from the browser
+
+http://<Public-IP-Address>:80
 
 If you see the text from the 'echo' command written to the html file, then the Virtual Host is working well. You should see your server's public hostname(DNS name) and Public Ip address. You can also access Website on your browser by public DMS name.
 
 END.
-
-
-
-
 
 
 
@@ -242,37 +240,37 @@ Once maintenance is over, the ***index.html*** is renamed or removed from the do
 To change this, you will need to edit the ***/etc/apache2/mods-enabled/dir.conf*** file and change the order in which the index.php file is listed within the **Directoryindex** directive.
 
 > sudo vim /etc/apache2/mods-enabled/dir.conf
->
-> This will open a text editor
->
-> ![Alt text](<Images/apache2 before edit in vim.PNG>)
->
-> ![Alt text](<Images/apache2 vim edit output.PNG>)
+
+This will open a text editor
+
+![Alt text](<Images/apache2 before edit in vim.PNG>)
+
+![Alt text](<Images/apache2 vim edit output.PNG>)
 
 After saving and closing the file, reload Apache so the changes can take effect running the below command.
 
 > sudo systemctl reload apache2
->
-> ![Alt text](<Images/apache2 reload.PNG>)
+
+![Alt text](<Images/apache2 reload.PNG>)
 
 Finally we will create a PHP script to confirm that Apache is able to handle and process requests for PHP files.
 Create a new file named ***index.php*** inside the custom web root folder.
 
 > sudo vim /var/www/projectlamp/index.php
->
-> This will open a blank editor. Add the following text, which is a valid PHP code inside the file.
->
+
+This will open a blank editor. Add the following text, which is a valid PHP code inside the file.
+
 <  <?php
 
    phpinfo();>
 
-> ![Alt text](<Images/PHP code inside vim.PNG>)
->
-> This output should be seen after you saved and close the file and refresh the page
->
-> ![Alt text](<Images/PHP FINAL TESTING.PNG>)
->
-> After confirmation, it is safe to remove the file as it contains sensitive information about your PHP environment and Ubuntu Server running the below command.
+![Alt text](<Images/PHP code inside vim.PNG>)
+
+This output should be seen after you saved and close the file and refresh the page
+
+![Alt text](<Images/PHP FINAL TESTING.PNG>)
+
+After confirmation, it is safe to remove the file as it contains sensitive information about your PHP environment and Ubuntu Server running the below command.
 
 
 
