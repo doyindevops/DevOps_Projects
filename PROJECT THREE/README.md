@@ -24,7 +24,7 @@ Then follow the steps below;
 - Your downloaded Key pair will be seated in downloads (or any folder you so choose).
 When you are in the downloads folder, run the below command to connect to your EC2 instance successfully.
 
-> cd ~/Downloads
+>           cd ~/Downloads
 
 ![Alt text](<Images/EC2 INSTANCE.PNG>)
 
@@ -41,17 +41,17 @@ Steps to install Apache;
 
 1- Run the commands below to update the list of packages in the package manager and the second command is to run the Apache2 package installer.
 
-> $ sudo apt update
+>               $ sudo apt update
 
 > ![Alt text](<Images/Sudo apt update 1.PNG>)
 > ![Alt text](<Images/Sudo apt update 2.PNG>)
  
 
-> $ sudo apt install apache2
+>               $ sudo apt install apache2
 
 After running the code above, you then run this next one to verify that you have correctly insytalled Apache2. If it is green and running, then you have just launched your first Web Server in the cloud. 
 
-> $ sudo systemctl status apache2
+>                $ sudo systemctl status apache2
 
 > ![Alt text](<Images/apache2 running.PNG>)
 
@@ -83,7 +83,7 @@ To install MySQL:
 
 Run the command below to install MySQL software and when prompted to confirm installation, type Y.
 
-> sudo apt install mysql-server
+>               sudo apt install mysql-server
 
 > ![Alt text](<Images/install mysql.PNG>)
 
@@ -93,19 +93,19 @@ Login to the MySQL console with the code below and this will connect to the MySQ
 
 You are advised to run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to your database system. before running the script, you will set a password for the root User, using **mysql_native _password** as default authentication method. We are defining this user's password here as **Password.1**
 
-> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+>               ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
 
 Exit the MySQL shell with
 
  
 
-> mysql> exit
+>               mysql> exit
 
 ![Alt text](<Images/exit mysql.PNG>)
 
 Start the interactive script by running the:
 
-> $ sudo mysql_secure_installation
+>               $ sudo mysql_secure_installation
 
 This will ask you if you want to configure the `VALIDATE PASSWORD PLUGIN `(note that enabling this feature is a judgement call, and if enabled, passwords which do not match the specified criteria will be rejected by MySQL with an error), so it is safe to leave it as disabled but use strong and unique passwords.
 After you answer yes, you will need to select a level of password verification (selecting 2 means strongest level as you will get errors when password does not contain numbers, upper and lowercases letters, and special characters).
@@ -122,11 +122,12 @@ For the rest of questions press Y and hit Enter at each prompt.This will prompt 
 
 When finished, test if login is successful running the below command. The -p flag will prompt for password used after changing the root user password
 
-> sudo mysql -p
+>               sudo mysql -p
 
 ![Alt text](<Images/test mysql logging.PNG>)
 
 You can then log out with the command
+
 ![Alt text](<Images/exit mysql.PNG>)
 
 
@@ -138,13 +139,13 @@ PHP is the conmponent of our setup that will help process code to display dynami
 
 To install the 3 packages at once. Run the following code:
 
-> sudo apt install php libapache2-mod-php php-mysql
+>               sudo apt install php libapache2-mod-php php-mysql
 
 ![Alt text](<Images/install PHP 3 packages.PNG>)
 
 Once the installation is complete, run the below command to confirm PHP version.
 
-> php -v
+>               php -v
 ![Alt text](<Images/PHP -V.PNG>)
 
 At this point the LAMP stack (Linux, Apache, MySQL and PHP) is completely installed and fully operational.
@@ -160,19 +161,19 @@ Set up a domain called ***projectlamp*** . Apache on Ubuntu has a server block e
 
 Create directory for ***projectlamp*** runing the command below:
 
-> $ sudo mkdir /var/www/projectlamp
+>               $ sudo mkdir /var/www/projectlamp
 
 ![Alt text](<Images/create projectlamp dir.PNG>)
 
 Assign ownership of the directory with the &USER environment variable, which will reference the current system user.
 
-> $ sudo chown -R $USER:$USER /var/www/projectlamp
+>               $ sudo chown -R $USER:$USER /var/www/projectlamp
 
 ![Alt text](Images/chown.PNG)
 
 Create and open a new configuration file in Apache's sites-available directory using any command line editor.
 
-> $ sudo vi /etc/apache2/sites-available/projectlamp.conf
+>               $ sudo vi /etc/apache2/sites-available/projectlamp.conf
 
 ![Alt text](<Images/sites-available vim.PNG>)
 
@@ -188,7 +189,7 @@ Paste the below bare-bones configuration by hitting on *i* on the keyboard to en
 </VirtualHost>
 Once you save and close, run the code below and you will get the result in the image
 
- >sudo ls /etc/apache2/sites-available
+>           sudo ls /etc/apache2/sites-available
 
 ![Alt text](<Images/result of site-available.PNG>)
    
@@ -196,29 +197,29 @@ Once you save and close, run the code below and you will get the result in the i
 With this configuration, we are telling Apache to serve ***projectlamp*** using **/var/www/projectlamp** as its root directory. If you want the Apache server to test without Domain name, /comment the options serverName and Server Alias by adding # in the beginning of each option's lines to tell the program to skip processing those lines.
 
 You can use a2ensite to enable the new virtual host.
-> $ sudo a2ensite projectlamp
+>               $ sudo a2ensite projectlamp
 
 You might want to disable the default website that comes installed with apache running the below command.
-> $ sudo a2dissite 000-default
+>               $ sudo a2dissite 000-default
 
 To make sure your configuration does not containsyntax error, run.
-> >$ sudo apache2ctl configtest
+>               $ sudo apache2ctl configtest
 
 ![Alt text](Images/a2ensite.PNG)
 
 Reload Apache so the changes take effect
 
-> $ sudo systemctl reload apache2
+>               $ sudo systemctl reload apache2
 ![Alt text](<Images/apache2 reload.PNG>)
 
 
 Your new website is now active but ***/var/www/projectlamp*** is still empty. Create an **index.html** file in that location so that you can test the Virtual host works as expected.
 
-> sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+>               sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 
 Access the website from the browser
 
-http://<Public-IP-Address>:80
+        http://<Public-IP-Address>:80
 
 If you see the text from the 'echo' command written to the html file, then the Virtual Host is working well. You should see your server's public hostname(DNS name) and Public Ip address. You can also access Website on your browser by public DMS name.
 
@@ -239,7 +240,7 @@ With the default **DirectoryIndex**, settings on Apache, a file named ***index.h
 Once maintenance is over, the ***index.html*** is renamed or removed from the document root, bringing back the regular application page.
 To change this, you will need to edit the ***/etc/apache2/mods-enabled/dir.conf*** file and change the order in which the index.php file is listed within the **Directoryindex** directive.
 
-> sudo vim /etc/apache2/mods-enabled/dir.conf
+>       sudo vim /etc/apache2/mods-enabled/dir.conf
 
 This will open a text editor
 
@@ -249,14 +250,14 @@ This will open a text editor
 
 After saving and closing the file, reload Apache so the changes can take effect running the below command.
 
-> sudo systemctl reload apache2
+>       sudo systemctl reload apache2
 
 ![Alt text](<Images/apache2 reload.PNG>)
 
 Finally we will create a PHP script to confirm that Apache is able to handle and process requests for PHP files.
 Create a new file named ***index.php*** inside the custom web root folder.
 
-> sudo vim /var/www/projectlamp/index.php
+>       sudo vim /var/www/projectlamp/index.php
 
 This will open a blank editor. Add the following text, which is a valid PHP code inside the file.
 
