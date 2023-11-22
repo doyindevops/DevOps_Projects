@@ -17,28 +17,29 @@ You can do the same sequence of steps by saving the commands in a bash script an
 Open a folder called ***shell-scripting*** on your terminal, using the command `mkdir shell-scripting`. This will be our folder for theis project.
 
 #### Step 2.    
-Create a file in the folder called `touch user-input.sh`
+Create a file in the folder called 
+>       `touch user-input.sh`
 
 ![Alt text](<Images/First shell 1-2.png>)
 
 #### Step 3.    
 Copy and paste the code below into the file.
->   #!/bin/bash
+>       #!/bin/bash
 >
->   #Prompt the user for their name
+>       #Prompt the user for their name
 >
->   echo "Enter your name:"
->   read name
+>       echo "Enter your name:"
+>       read name
 >
->   #Display a greeting with the entered name
+>       #Display a greeting with the entered name
 >
->   echo "Hello, $name! Nice to meet you."
+>        echo "Hello, $name! Nice to meet you."
 
 #### Step 4. 
 Save your file.
 
 #### Step 5.
-Run this command to make the file executable `chmod x user-input.sh`
+Run this command to make the file executable > >        `chmod x user-input.sh`
 #### Step 6.
 Run the script using the command `./user-input.sh`
 and you will get the output beneath.
@@ -108,7 +109,10 @@ Copy the code below and paste inside the file
 ![Alt text](<Images/D MANIP 3.png>)
 
 #### Step 3.
-Run the command `chmod +x navigating-linux-filesysytem.sh` This will execute permission on the file.
+Run the command 
+>       `chmod +x navigating-linux-filesysytem.sh`
+
+ This will execute permission on the file.
 
  ![Alt text](<Images/D MANIP 2.png>)  
 
@@ -130,7 +134,7 @@ Run the command `chmod +x navigating-linux-filesysytem.sh` This will execute per
 
 #### Step 1.
 Create a file in your terminal called ***sorting.sh*** using 
-`touch sorting.sh`
+>     `touch sorting.sh`
 
 ![Alt text](<Images/FILE OP 1.png>)
 
@@ -176,9 +180,12 @@ Copy and paste the code block below into the file
 
 #### Steps 3 & 4.
 
-`chmod +x sorting.sh` This command will set execute permission.
+>       `chmod +x sorting.sh` 
 
-Run your script using this command `./sorting.sh`
+This command will set execute permission.
+
+Run your script using this command 
+>   `./sorting.sh`
 
 ![Alt text](<Images/FILE OP 3&4.png>)
 
@@ -242,12 +249,17 @@ Create a file on the terminal  called ***calculations.sh*** with this command `t
 
 #### Step 3
 
-Set execute permission on ***calculations.sh*** using this command `chmod +x calculations.sh`
+Set execute permission on ***calculations.sh*** using this command 
+
+>       `chmod +x calculations.sh`
+
 ![Alt text](<Images/NUMB 3.png>)
 
 
 #### Step 4
-Run the script with `./calculations.sh`
+Run the script with 
+
+>       `./calculations.sh`
 
 ![Alt text](<Images/step 4.png>)
 
@@ -268,7 +280,8 @@ The scripts
 
 
 #### Step 1.
-On the terminal create a file ***backup.sh*** with this command `touch backup.sh`
+On the terminal create a file ***backup.sh*** with this command 
+>       `touch backup.sh`
 
 ![Alt text](<Images/BACKUP STEP 1.png>)
 
@@ -300,13 +313,17 @@ Copy and paste the code block below into the file
 ![Alt text](<Images/BACKUP step 2.png>)
 
 #### Step 3.
-Set execute permission on the file using `chmod +x backup.sh`
+Set execute permission on the file using
+
+>        `chmod +x backup.sh`
 
 ![Alt text](<Images/BACKUP chmod.png>)
 
 #### Step 4.
 
-Run your script using `./backup.sh`
+Run your script using 
+
+>       `./backup.sh`
 
 ![Alt text](<Images/BACKUP step 4.png>)
 
