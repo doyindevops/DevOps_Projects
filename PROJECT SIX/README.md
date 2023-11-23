@@ -15,6 +15,7 @@ Create and configure 2 Linux-based virtual servers (EC2 Instances in AWS)
 Once the Instances are up and running, we will connect to them remotely  and then always do 'apt update' on new servers, before installing or configuring any thing on it.
 
 
+>       sudo apt update
 
 ***MySQL Server connection and update***
 
@@ -32,10 +33,14 @@ Once the Instances are up and running, we will connect to them remotely  and the
 
 Install MySQL Server software on `mysql server` Linux Server
 
+>       sudo apt install mysql-server
+
 ![Alt text](<Images/INSTALL MYSQL-SERVER.png>)
 
 
 Install MySQL Client software on `mysql client` Linux Server
+
+>        sudo apt install mysql-client
 
 ![Alt text](<Images/INSTALL MYSQL-CLIENT.png>)
 
