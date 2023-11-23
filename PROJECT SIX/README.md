@@ -87,5 +87,7 @@ and
 
 ![Alt text](Images/SUCCESS!.png)
 
+'NOTE: The IP used is the Private IP of MySQL Server'
+
 Once you get an output similar to above then you have deployed a fully funtional MySQL Client-Server set up.
 
