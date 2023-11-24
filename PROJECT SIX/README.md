@@ -1,4 +1,6 @@
-# Client Server Architecture with MySQL as RDBMS
+# Client Server Architecture
+
+### Client Server Architecture with MySQL as RDBMS
 
 Client server refers to an architecture in whicg 2 or more computers are connected together over a network to send and receive requests between one another. 
 
