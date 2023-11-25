@@ -68,7 +68,7 @@ All the process we need to deploy our webservers has been codified in the shell 
 #### Follow the steps below to run the Apache2 webserver shell scripts:
 
 ##### Step 1. 
-Provision an EC2 instance running ubuntu 22.04. You can refer to ***Project 7*** as a refresher. 
+Provision an EC2 instance running ubuntu 20.04. You can refer to ***Project 7*** as a refresher. 
 **Note: We are provisioning 2 webservers**
 
 ![Alt text](<Images/WEBSERVER 1.png>)
