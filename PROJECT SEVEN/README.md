@@ -3,7 +3,7 @@
 
 ### Introduction to Load Balancing and Nginx
 
-
+![Alt text](image.png)
 
 #### Loadbalancer in simple explanation:
 Imagine you have a large group of people trying to enter a building through a single door. The door quickly becomes a bottleneck, causing congestion and delays. To improve the flow of people, you can open multiple doors, each leading to different sections of the building. This effectively distributes the crowd, reducing congestion and making entry more efficient.
