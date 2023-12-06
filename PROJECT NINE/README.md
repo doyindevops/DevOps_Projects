@@ -4,11 +4,11 @@ Three-tier Architecture Generally, web, or mobile solutions are implemented base
 
 Three-tier Architecture is a client-server software architecture pattern that comprise of 3 separate layers.
 
-Your 3-Tier Setup
+#### Your 3-Tier Setup
 
-A Laptop or PC to serve as a client
-An EC2 Linux Server as a web server (This is where you will install WordPress)
-An EC2 Linux server as a database (DB) server
+- A Laptop or PC to serve as a client
+- An EC2 Linux Server as a web server (This is where you will install WordPress)
+- An EC2 Linux server as a database (DB) server
 
 
 In this project we are tasked to prepare a storage infrastructure on two Linux servers and implement a basic web solution using WordPress. WordPress is a free and open-source content management system written in PHP and paired with MySQL as its backend Relational Database Management System (RDBMS). 
@@ -19,11 +19,11 @@ This Project consists of two parts:
 
 - Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify your skills of deploying Web and DB tiers of Web solution.
 
-we are going to do this in 2 parts :
+***We are going to carry out these in 2 parts*** :
 
-1.Configure storage subsystem for Web and Database servers based on Redhat Linux OS. The focus of this part is to give you practical experience of working with disks, partitions and volumes in Linux.
+1. Configure storage subsystem for Web and Database servers based on Redhat Linux OS. The focus of this part is to give you practical experience of working with disks, partitions and volumes in Linux.
 
-2.Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify your skills of deploying Web and DB tiers of Web solution.
+2. Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify your skills of deploying Web and DB tiers of Web solution.
 
 
 #### Step 1
