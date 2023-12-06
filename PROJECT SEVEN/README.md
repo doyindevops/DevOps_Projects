@@ -3,7 +3,7 @@
 
 ### Introduction to Load Balancing and Nginx
 
-![Alt text](image.png)
+
 
 #### Loadbalancer in simple explanation:
 Imagine you have a large group of people trying to enter a building through a single door. The door quickly becomes a bottleneck, causing congestion and delays. To improve the flow of people, you can open multiple doors, each leading to different sections of the building. This effectively distributes the crowd, reducing congestion and making entry more efficient.
@@ -15,7 +15,7 @@ By doing this, no single server gets overwhelmed with too much traffic, and ever
 
 Lets say you have a set of webservers serving your website, in other to distribute the traffic evenly between the webservers, a loadbalancer is deployed. The load balancer stands in front of the webserver, all traffic gets to it first, it then distributes the traffic accross the set of webservers. This is to ensure no webserver gets overworked, consequently improving system performance.
 
-![Alt text](image.png)
+![Alt text](Images/what-is-load-balancing-diagram-NGINX-1024x518.webp)
 
 Nginx is a versatile software, it can act like a webserver, reverse proxy,and load balancer etc. All you need is to configure it to how you want it used. 
 
