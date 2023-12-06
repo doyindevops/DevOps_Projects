@@ -1,42 +1,41 @@
-# Implementing WordPress website with Logical Volume Management (LVM)
+# A WEB SOLUTION WITH WORDPRESS
+
+Three-tier Architecture Generally, web, or mobile solutions are implemented based on what is called the Three-tier Architecture.
+
+Three-tier Architecture is a client-server software architecture pattern that comprise of 3 separate layers.
+
+Your 3-Tier Setup
+
+A Laptop or PC to serve as a client
+An EC2 Linux Server as a web server (This is where you will install WordPress)
+An EC2 Linux server as a database (DB) server
 
 
-### Project Scope:
+In this project we are tasked to prepare a storage infrastructure on two Linux servers and implement a basic web solution using WordPress. WordPress is a free and open-source content management system written in PHP and paired with MySQL as its backend Relational Database Management System (RDBMS). 
 
-Configure storage subsystem for Web and Database servers, we will work with disks, partitions, and volumes in Linux.
+This Project consists of two parts: 
 
-Install WordPress and connect it to a remote My SQL database server.
+- Configure storage subsystem for Web and Database servers based on Redhat Linux OS. The focus of this part is to give you practical experience of working with disks, partitions and volumes in Linux. 
 
-### Three-tier Architecture
-Generally, web or Mobile solutions are Implemented based on what is called Three-tier Architecture
+- Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify your skills of deploying Web and DB tiers of Web solution.
 
-***Presentation Layer(PL)***: This is the user interface such as the client-server or browser on your Laptops.
+we are going to do this in 2 parts :
 
-***Business Layer(BL)***: This is the backend program that implements business logic. Application or webserver.
+1.Configure storage subsystem for Web and Database servers based on Redhat Linux OS. The focus of this part is to give you practical experience of working with disks, partitions and volumes in Linux.
 
-***Data Access or Management Layer(DAL)***: Layer for the computer data storage and data access. Database server or File system such as FTP server or NFs server.
-
+2.Install WordPress and connect it to a remote MySQL database server. This part of the project will solidify your skills of deploying Web and DB tiers of Web solution.
 
 
-## IMPLEMENTING LVM ON LINUX SERVERS (WEB SERVER AND DATABASE SERVER)
+#### Step 1
 
+We will be spinning up an Instance in AWS ec2 and give it an appropriate name. I gave mine Web-Server and you can go ahead with same or be creative. 
 
-#### PREREQUISTE:
+### Prepare a WebServer and Create Volumes
 
-- Two Cloud Servers: a WebServer and a Database Server
-- Both servers to run on RedHatLinux OS
-- Linux Terminal(Git Bash) ON VSCODE
-- Ability to connect the terminal to the cloud environment using SSH.
+LAUNCH AN EC2 INSTANCE THAT WILL SERVE AS “WEB-SERVER”
 
-
-
-#### STEP 1 
-
-### Spin up webserver Instance 
-
-1. Spin up a webserver instance to run on RedHat linux OS and connnect the webserver to the terminal by doing SSH
-
-Create the volumes of 10G for the web server
+1. 
+Spin up an EC2 instance on AWS and Create 3 Volumes of 10G for the web server on same AV Zone
 
 ![Alt text](<Images/WEBSERVER INSTANCE.png>)
 
