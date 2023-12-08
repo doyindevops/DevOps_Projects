@@ -1,17 +1,14 @@
 # DevOps_Projects
 
+## 32 REAL TIME DEVOPS PROJECTS
+
+
 ### Darey.io Project Based Learning
 
 This is a repository for Projects starting from the basic Linux Projects up to advance projects and many others. Each project will be in a folder under `DevOps_Projects`. And listed here for easy references
 
 
-
-
-
-The following projects will be implemented:
-
-### 32 REAL TIME DEVOPS PROJECTS
-
+The following projects have been implemented out of 32 the Projects so far and this is ongoing. As I finish the remaining projects, I will keep updating this page.
 
 
 
