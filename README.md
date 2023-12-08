@@ -1,4 +1,4 @@
-# DevOps_Projects
+# DevOps_Projects  :briefcase: :pushpin: 💻
 
 ## 32 REAL TIME DEVOPS PROJECTS
 
