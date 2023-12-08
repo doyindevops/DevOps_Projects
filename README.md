@@ -8,7 +8,8 @@
 This is a repository for Projects starting from the basic Linux Projects up to advance projects and many others. Each project will be in a folder under `DevOps_Projects`. And listed here for easy references
 
 
-The following projects have been implemented out of 32 the Projects so far and this is ongoing. As I finish the remaining projects, I will keep updating this page.
+The following projects have been implemented so far out of the 32 Projects which is ongoing, till the 32nd Project. 
+I will keep updating this page.
 
 
 
