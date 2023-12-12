@@ -115,7 +115,11 @@ Point Jenkins to the ``main` branch
 
 >       ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
 
+
+
 ![Alt text](<Images/jenkins output 1.png>)
+
+
 
 ![Alt text](<Images/check var folder.png>)
 
