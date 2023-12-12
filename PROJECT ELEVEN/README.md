@@ -1,6 +1,6 @@
-### An Introduction to Ansible
+# An Introduction to Ansible
 
-#### What is Ansible?
+## What is Ansible?
 
 Ansible is a simple, open-source IT automation platform that helps you automate tasks like application deployment, configuration management, and cloud provisioning. It's agentless, meaning it doesn't require any software to be installed on the machines you want to manage.
 
@@ -12,7 +12,7 @@ Ansible is at the forefront of automation, systems administration, and DevOps.
 - Increase agility
 - Open source
 
-#### Ansible Client as a Jump Server (Bastion Host)
+### Ansible Client as a Jump Server (Bastion Host)
 A Jump Server (sometimes also referred as `Bastion` Host) is an intermediary server through which access to internal network can be provided. If you think about the current architecture you are working on, ideally, the webservers would be inside a secured network which cannot be reached directly from the Internet. That means, even DevOps engineers cannot SSH into the Web servers directly and can only access it through a Jump Server - it provides better security and reduces attack surface.
 
 On the diagram below the Virtual Private Network (VPC) is divided into two subnets - Public subnet has public IP addresses and Private subnet is only reachable by private IP addresses.
@@ -49,7 +49,7 @@ Check your ansible version running `ansible --version`
 
 ![Alt text](<Images/ansible version.png>)
 
-4. #### INSTALL AND CONFIGURE JENKINS
+4. ## INSTALL AND CONFIGURE JENKINS
 
 - Install Jenkins and check status
 
