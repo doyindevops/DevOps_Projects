@@ -45,7 +45,7 @@ We will use the server to run playbooks.
 
 Check your ansible version running `ansible --version`
 
->        andible --version
+>        ansible --version
 
 ![Alt text](<Images/ansible version.png>)
 
@@ -159,7 +159,8 @@ This will create and switch to new branch
 
 ![Alt text](<Images/git branche.png>)
 
-3. Create a directory named playbooks. It will be used to store all your playbook files. >  >           mkdir playbooks
+3. Create a directory named playbooks. It will be used to store all your playbook files. >  
+>           mkdir playbooks
 
 4. Create a directory named inventory. It will be used to keep your hosts organised. mkdir inventory
 >           mkdir inventory
@@ -186,6 +187,21 @@ An Ansible inventory file defines the hosts and groups of hosts upon which comma
 
 1. Save the below inventory structure in the `inventory/dev` file to start configuring your development servers. Ensure to replace the IP addresses according to your own setup.
 
+>           [nfs]
+>           <NFS-Server-Private-IP-Address>  ansible_ssh_user=ec2-user
+>
+>           [webservers]
+>           <Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
+>           <Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
+>
+>           [db]
+>           <Database-Private-IP-Address> ansible_ssh_user=ec2-user 
+>
+>           [lb]
+>           <Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
+
+
+
 Note: Ansible uses TCP port 22 by default, which means it needs to `ssh` into target servers from `Jenkins-Ansible` host. For this we can implement the concept of `ssh-agent`. Now you need to import key into `ssh-agent`
 
 >           eval `ssh-agent -s`
@@ -209,22 +225,7 @@ Note: Ansible uses TCP port 22 by default, which means it needs to `ssh` into ta
 ![Alt text](<Images/ssh into ubuntu.png>)
 
 
-4. Update the `inventory/dev.yml` file with the below code snippet.
-
->           [nfs]
->           <NFS-Server-Private-IP-Address>  ansible_ssh_user=ec2-user
->
->           [webservers]
->           <Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
->           <Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
->
->           [db]
->           <Database-Private-IP-Address> ansible_ssh_user=ec2-user 
->
->           [lb]
->           <Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
-
-Input the IP addresses and usernames of the respective servers you provisioned in AWS.
+4. Update the `inventory/dev.yml` file by inputting the IP addresses and usernames of the respective servers you provisioned in AWS.
 
 **As you can see we will need to launch 5 servers (1 Ubuntu and 4 RHEL servers)**
 
@@ -334,7 +335,8 @@ Once your code changes in master branch, Jenkins will do its job and save all th
 
 Now it is time to execute ansible-playbook command and verify the playbook actually works.
 
-1. Setup VSCode to connect to your instance.
+1. Clone the repo into the ubuntu server
+
 
 >           cd ansible-config-mgt
 
