@@ -89,8 +89,6 @@ Use `lsblk` to view the configured partitions.
 
 >       sudo lsblk
 
-![Alt text](<Images/lsblk 2.png>)
-
 
 Run the command below to install the LVM2 Package and check for available partitions
 
