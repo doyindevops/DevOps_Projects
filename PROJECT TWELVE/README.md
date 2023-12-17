@@ -8,7 +8,7 @@ In this project, I will continue working with `ànsible-config-mgt` repository a
 ##  Jenkins Job Enhancement
 Before we begin, let us make some changes to our Jenkins job - now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins serves with each subsequent change. Let us enhance it by introducing a new Jenkins project/job - we will require Copy Artifact plugin.
 
-1. Go to the Jenkins-ansible server and in the home directory of the ubuntu user, create a new directory named `ansible-config-mgt`
+1. Go to the Jenkins-ansible server and in the home directory of the ubuntu user, create a new directory named `ansible-config-artifact`
 
 >           sudo mkdir /home/ubuntu/ansible-config-artifact
 
@@ -56,6 +56,7 @@ Before starting to refactor any codes, ensure that you have pulled down the late
 
 1. Within playbooks folder, create a new file and name it site.yml - This file will now be considered as an entry point into the entire infrastructure configuration. Other playbooks will be included here as a reference. In other words, site.yml will become a parent to all other playbooks that will be developed. Including common.yml that you created previously.
 
+![Alt text](Images/site.yml,static-assignments.png)
 
 2. Create a new folder in root of the repository and name it static-assignments. The static-assignments folder is where all other children playbooks will be stored. This is merely for easy organization of your work.
 
@@ -70,8 +71,6 @@ Before starting to refactor any codes, ensure that you have pulled down the late
 >         - hosts: all
 >         - import_playbook: ../static-assignments/common.yml
 
-
-![Alt text](Images/site.yml,static-assignments.png)
 
 
 The code above uses built in import_playbook Ansible module.
@@ -255,6 +254,8 @@ Within the static-assignments folder, create a new assignment for uat-webservers
       roles:
         - webserver
 
+![Alt text](<Images/uat-weservers.yml 2.png>)
+
 Remember that the entry point to our ansible configuration is the site.yml file. Therefore, you need to refer your uat-webservers.yml role inside site.yml.
 
 So, we should have this in site.yml
@@ -266,7 +267,7 @@ So, we should have this in site.yml
 >           - hosts: uat-webservers
 >           - import_playbook: ../static-assignments/uat-webservers.yml
 
-
+![Alt text](<Images/uat site.yml.png>)
 
 #### Step 5 – 
 ## Commit & Test
