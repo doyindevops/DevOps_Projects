@@ -13,8 +13,8 @@ I will keep updating this page.
 
 
 
-- Project 1               - Linux Practice 
-- Project 2               - Git 
+- Project 1                       - Linux Practice 
+- Project 2                       - Git 
 - Project 3               - AWS-LAMP-STACK IMPLEMENTATION
 - Project 4               - LEMP STACK IMPLEMENTATION    
 - Project 5               - SHELL SCRIPTING AND USER INPUT
