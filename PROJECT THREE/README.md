@@ -179,14 +179,15 @@ Create and open a new configuration file in Apache's sites-available directory u
 
 Paste the below bare-bones configuration by hitting on *i* on the keyboard to enter insert mode and paste the below
 
-<VirtualHost *:80>
-    ServerName projectlamp
-    ServerAlias www.projectlamp 
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/projectlamp
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+        >    <VirtualHost *:80>
+        >            ServerName projectlamp
+        >            ServerAlias www.projectlamp 
+        >            ServerAdmin webmaster@localhost
+        >            DocumentRoot /var/www/projectlamp
+        >            ErrorLog ${APACHE_LOG_DIR}/error.log
+        >            CustomLog ${APACHE_LOG_DIR}/access.log combined
+        >   </VirtualHost>
+
 Once you save and close, run the code below and you will get the result in the image
 
 >           sudo ls /etc/apache2/sites-available
