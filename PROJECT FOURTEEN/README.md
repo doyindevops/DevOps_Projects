@@ -48,15 +48,7 @@ Subnets are like smaller segments withing a VPC that help you organize and manag
 
 We will create public and private subnets with the below data
 
->   SUBNET NAME         /           AZ               /       CIDR BLOCK
-
->   subnet-public1a     /        us-east-1a         /         10.0.11.0/24
-
->   subnet-public2b     /        us-east-1b         /         10.0.12.0/24
-
->   subnet-private1a    /        us-east-1a         /         10.0.1.0/24
-
->   subnet-private2b    /        us-east-1b          /        10.0.2.0/24
+![Alt text](<Images/Screenshot 2024-01-15 210841.png>)
 
 
 Go to VPC > Subnets > Create Subnets and select VPC that was created previously (first-vpc) or anything you tagged your VPC as.
