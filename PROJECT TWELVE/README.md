@@ -3,6 +3,13 @@
 
 In this project, I will continue working with `ànsible-config-mgt` repository and make some improvements of our code. We will refactor our Ansible code, create assignments, and learn how to use the import functionality. Imports allow to effectively re-use previously created playbooks in a new playbook - it allows us to organize our tasks and reuse them when needed.
 
+
+
+## Code Refactoring
+Refactoring is a general term in computer programming. It means making changes to the source code without changing expected behaviour of the software. The main idea of refactoring is to enhance code readability, increase maintainability and extensibility, reduce complexity, add proper commenting without affecting the logic. For this project we will move things around a little in our ansible code from the last project but the overall state of the infrastructure will remain the same.
+
+Let us review and improve on our Ansible code!
+
 #### Step 1 
 
 ##  Jenkins Job Enhancement
