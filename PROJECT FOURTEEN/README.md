@@ -1,4 +1,4 @@
-# AWS NETWORKING Implementation (VPC, Subnets, IG,NAT,Routing)
+# AWS Networking Implementation Project (VPC, Subnets, Internet Gateways, NAT, Routing) By Adedoyin Ekong
 
 ### What is an Amazon VPC?
 
