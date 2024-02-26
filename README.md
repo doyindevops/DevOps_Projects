@@ -1,6 +1,5 @@
 # DevOps_Projects  :briefcase: :pushpin: 💻
 
-## Welcome to my Implementation of 32 Intensive DevOps Projects on the Darey.IO Professional DevOps Project Based Bootcamp
 
 
 This is a repository for Projects starting from the basic Linux Projects up to advance projects and many others. Each project will be in a folder under `DevOps_Projects`. And listed here for easy references
